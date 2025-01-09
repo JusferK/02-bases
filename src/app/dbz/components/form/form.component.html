@@ -1,0 +1,16 @@
+<form class="row" [formGroup]="newCharacterForm" (submit)="onSubmit()">
+  <h4>Agregar personaje</h4>
+  <input
+    class="form-control mb-2"
+    type="text"
+    placeholder="nombre del personaje"
+    formControlName="name"
+  >
+  <input
+    class="form-control mb-2"
+    type="number"
+    placeholder="poder"
+    formControlName="power"
+  >
+  <input type="submit" class="btn btn-primary">
+</form>

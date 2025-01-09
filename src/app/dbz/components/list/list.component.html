@@ -1,0 +1,15 @@
+<h4>Listado</h4>
+<ul class="list-group">
+  @for (character of characterList(); track $index; let isFirst = $first; let isLast = $last) {
+    <li
+      class="list-group-item d-flex justify-content-between align-items-center"
+      [ngClass]="{ 'list-group-item-success': isFirst, 'list-group-item-dark': isLast }">
+      <div>
+        <span class="text-primary">{{ $index + 1 }}.</span>
+        - {{ character.name }} - {{ character.power }} -
+        <span>{{ character.id }}</span>
+      </div>
+      <button class="btn btn-danger" (click)="removeCharacter(character)">-</button>
+    </li>
+  }
+</ul>
